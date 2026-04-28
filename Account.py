@@ -1,5 +1,4 @@
 class Account:
-
     def __init__(self):
         self.customer = None
         self.balance = 0
@@ -22,3 +21,13 @@ class Account:
 
     def set_interest_rate(self, rate):
         self.interest_rate = rate
+
+    def add_funds(self, amount: float):
+        self.balance += amount
+
+    def add_interest(self):
+        self.balance += self.balance * self.interest_rate
+
+    def close(self):
+        self.customer = None
+        self.balance = 0
